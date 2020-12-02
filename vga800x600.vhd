@@ -1065,7 +1065,7 @@ begin
    begin
 		if rising_edge(CLOCK_50) then
 			if SW(1) = '0' then
-				 if (cnt<249999) then
+				 if (cnt<10000000) then
 					 cnt:=cnt+1;
 				 else
 					 clk_1hz <= NOT(clk_1hz);
@@ -1448,12 +1448,7 @@ begin
 				end if;
 			end if;
 			
-			
-			
-	
-	
-		
-			
+
 		else
 			VGA_R <= "0000000000";
 			VGA_G <= "0000000000";
@@ -1462,9 +1457,5 @@ begin
 	end if;
 end process;
 
-
-
-	
-	
 	
 end architecture;
